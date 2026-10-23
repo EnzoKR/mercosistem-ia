@@ -1,0 +1,44 @@
+id: github
+name: GitHub
+description: PRs, issues, code review, releases
+category: development
+icon: github
+
+detection:
+  method: hybrid
+  cli:
+    command: gh
+    version_flag: --version
+    min_version: "2.0.0"
+  npm:
+    package: "@modelcontextprotocol/server-github"
+
+server:
+  command: npx
+  args: ["-y", "@modelcontextprotocol/server-github"]
+  env:
+    GITHUB_PERSONAL_ACCESS_TOKEN: "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+
+auth:
+  - key: GITHUB_PERSONAL_ACCESS_TOKEN
+    label: "GitHub Personal Access Token"
+    hint: "Create at https://github.com/settings/tokens (scopes: repo, read:org)"
+    required: true
+    validate: "gh auth status"
+
+tools:
+  - name: create_pull_request
+    description: Create a new pull request
+  - name: list_issues
+    description: List repository issues
+  - name: create_issue
+    description: Create a new issue
+  - name: search_code
+    description: Search code across repositories
+  - name: get_file_contents
+    description: Get contents of a file
+
+relevant_sectors:
+  - development
+  - quality
+  - operations

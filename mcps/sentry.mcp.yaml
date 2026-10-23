@@ -1,0 +1,41 @@
+id: sentry
+name: Sentry
+description: Error tracking, performance monitoring, and issue management
+category: monitoring
+icon: sentry
+
+detection:
+  method: npm
+  npm:
+    package: "@sentry/mcp-server"
+
+server:
+  command: npx
+  args: ["-y", "@sentry/mcp-server"]
+  env:
+    SENTRY_AUTH_TOKEN: "${SENTRY_AUTH_TOKEN}"
+    SENTRY_ORG: "${SENTRY_ORG}"
+
+auth:
+  - key: SENTRY_AUTH_TOKEN
+    label: "Sentry Auth Token"
+    hint: "Create at https://sentry.io/settings/auth-tokens/"
+    required: true
+    validate: "sentry-cli info"
+  - key: SENTRY_ORG
+    label: "Sentry Organization Slug"
+    hint: "Your Sentry organization slug"
+    required: true
+
+tools:
+  - name: list_issues
+    description: List Sentry issues
+  - name: get_issue
+    description: Get details of a specific issue
+  - name: search_events
+    description: Search error events
+
+relevant_sectors:
+  - development
+  - quality
+  - infrastructure

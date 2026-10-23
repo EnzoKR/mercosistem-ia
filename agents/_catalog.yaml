@@ -1,0 +1,35 @@
+catalog:
+  version: "2.0.0"
+  sectors:
+    - name: Core
+      agents: [solution-architect, release-manager, platform-engineer, insight-hunter]
+    - name: Development
+      agents: [tech-lead, qa-engineer, devops-engineer, code-reviewer, backend-developer, frontend-developer, ux-design-expert, product-manager, ux-designer, business-analyst, scrum-master, dba, security-analyst, tech-writer, desktop-developer, ios-developer, android-developer, cross-platform-mobile]
+    - name: Implantation
+      agents: [deployment-manager, environment-specialist, migration-specialist, integration-specialist, go-live-coordinator]
+    - name: Support
+      agents: [l1-support, l2-support, l3-support, knowledge-base-manager, sla-monitor]
+    - name: Training
+      agents: [training-designer, onboarding-coach, assessment-creator, workshop-facilitator]
+    - name: Finance
+      agents: [billing-analyst, financial-controller, accounts-manager, budget-planner]
+    - name: HR
+      agents: [recruiter, interview-coordinator, hr-onboarding, performance-analyst, benefits-manager, people-culture]
+    - name: Customer Success
+      agents: [csm, churn-prevention, expansion-manager, nps-analyst, renewal-manager]
+    - name: Administrative
+      agents: [procurement-specialist, document-controller, office-manager, process-documentation-officer]
+    - name: Marketing
+      agents: [content-creator, seo-specialist, social-media-manager, email-marketing, paid-ads-manager, marketing-analyst, brand-guardian, landing-page-builder]
+    - name: Commercial
+      agents: [sdr, account-executive, proposal-writer, crm-manager, pricing-strategist]
+    - name: R&D
+      agents: [market-researcher, innovation-scout, prototype-builder, benchmark-analyst, product-analyst]
+    - name: Board
+      agents: [strategic-advisor, okr-manager, board-report-writer, risk-analyst, governance-officer, business-intelligence]
+    - name: Accounting
+      agents: [accountant, tax-compliance, fiscal-analyst, payroll-specialist, audit-analyst, financial-reporting]
+    - name: Legal
+      agents: [contract-manager, legal-counsel, ip-specialist, labor-attorney]
+    - name: Compliance
+      agents: [compliance-officer, data-privacy-specialist, regulatory-monitor, internal-auditor]

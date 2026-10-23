@@ -1,0 +1,39 @@
+id: vercel
+name: Vercel
+description: Deployments, projects, and hosting management
+category: infrastructure
+icon: vercel
+
+detection:
+  method: hybrid
+  cli:
+    command: vercel
+    version_flag: --version
+  npm:
+    package: "mcp-handler"
+
+server:
+  command: npx
+  args: ["-y", "mcp-handler"]
+  env:
+    VERCEL_TOKEN: "${VERCEL_TOKEN}"
+
+auth:
+  - key: VERCEL_TOKEN
+    label: "Vercel Token"
+    hint: "Create at https://vercel.com/account/tokens"
+    required: true
+    validate: "vercel whoami"
+
+tools:
+  - name: list_deployments
+    description: List recent deployments
+  - name: get_deployment
+    description: Get details of a specific deployment
+  - name: list_projects
+    description: List all projects
+
+relevant_sectors:
+  - infrastructure
+  - development
+  - operations

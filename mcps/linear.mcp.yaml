@@ -1,0 +1,37 @@
+id: linear
+name: Linear
+description: Issue tracking, project management, and team workflows
+category: project-management
+icon: linear
+
+detection:
+  method: npm
+  npm:
+    package: "@larryhudson/linear-mcp-server"
+
+server:
+  command: npx
+  args: ["-y", "@larryhudson/linear-mcp-server"]
+  env:
+    LINEAR_API_KEY: "${LINEAR_API_KEY}"
+
+auth:
+  - key: LINEAR_API_KEY
+    label: "Linear API Key"
+    hint: "Create at https://linear.app/settings/api"
+    required: true
+
+tools:
+  - name: create_issue
+    description: Create a new issue
+  - name: list_issues
+    description: List project issues
+  - name: update_issue
+    description: Update an existing issue
+  - name: list_projects
+    description: List available projects
+
+relevant_sectors:
+  - product
+  - development
+  - operations

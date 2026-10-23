@@ -1,0 +1,17 @@
+catalog:
+  version: "1.0.0"
+  categories:
+    - name: development
+      mcps: [github, postgresql]
+    - name: communication
+      mcps: [slack]
+    - name: project-management
+      mcps: [linear]
+    - name: monitoring
+      mcps: [sentry]
+    - name: knowledge
+      mcps: [notion]
+    - name: design
+      mcps: [figma, pencil]
+    - name: infrastructure
+      mcps: [vercel]

@@ -1,0 +1,91 @@
+catalog:
+  version: "1.0.0"
+  formats:
+    # Content platforms
+    - id: instagram-feed
+      name: Instagram Feed Post
+      file: instagram-feed.md
+    - id: instagram-reels
+      name: Instagram Reels
+      file: instagram-reels.md
+    - id: instagram-stories
+      name: Instagram Stories
+      file: instagram-stories.md
+    - id: linkedin-post
+      name: LinkedIn Post
+      file: linkedin-post.md
+    - id: linkedin-article
+      name: LinkedIn Article
+      file: linkedin-article.md
+    - id: twitter-post
+      name: Twitter/X Post
+      file: twitter-post.md
+    - id: twitter-thread
+      name: Twitter/X Thread
+      file: twitter-thread.md
+    - id: youtube-script
+      name: YouTube Script
+      file: youtube-script.md
+    - id: youtube-shorts
+      name: YouTube Shorts
+      file: youtube-shorts.md
+    - id: blog-post
+      name: Blog Post
+      file: blog-post.md
+    - id: blog-seo
+      name: SEO Content
+      file: blog-seo.md
+    - id: email-newsletter
+      name: Email Newsletter
+      file: email-newsletter.md
+    - id: email-sales
+      name: Sales Email
+      file: email-sales.md
+    - id: whatsapp-broadcast
+      name: WhatsApp Broadcast
+      file: whatsapp-broadcast.md
+    # Disciplines
+    - id: copywriting
+      name: Copywriting
+      file: copywriting.md
+    - id: researching
+      name: Research
+      file: researching.md
+    - id: review
+      name: Content Review
+      file: review.md
+    - id: image-design
+      name: Image Design
+      file: image-design.md
+    - id: strategist
+      name: Strategy
+      file: strategist.md
+    - id: technical-writing
+      name: Technical Writing
+      file: technical-writing.md
+    - id: data-analysis
+      name: Data Analysis
+      file: data-analysis.md
+    # Software House
+    - id: code-review
+      name: Code Review
+      file: code-review.md
+    - id: deploy-checklist
+      name: Deploy Checklist
+      file: deploy-checklist.md
+    - id: sprint-planning
+      name: Sprint Planning
+      file: sprint-planning.md
+    - id: api-documentation
+      name: API Documentation
+      file: api-documentation.md
+    # Web Design
+    - id: landing-page
+      name: Landing Page
+      file: landing-page.md
+    - id: landing-page-react
+      name: Landing Page React
+      file: landing-page-react.md
+    - id: fullstack-page-generation
+      name: Full-Stack Page Generation
+      file: fullstack-page-generation.md

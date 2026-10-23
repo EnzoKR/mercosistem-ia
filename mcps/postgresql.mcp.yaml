@@ -1,0 +1,39 @@
+id: postgresql
+name: PostgreSQL
+description: SQL queries, schema inspection, and database management
+category: development
+icon: postgresql
+
+detection:
+  method: hybrid
+  cli:
+    command: psql
+    version_flag: --version
+  npm:
+    package: "@modelcontextprotocol/server-postgres"
+
+server:
+  command: npx
+  args: ["-y", "@modelcontextprotocol/server-postgres"]
+  env:
+    POSTGRESQL_URL: "${POSTGRESQL_URL}"
+
+auth:
+  - key: POSTGRESQL_URL
+    label: "PostgreSQL Connection URL"
+    hint: "Format: postgresql://user:password@host:5432/database"
+    required: true
+    validate: "psql -c 'SELECT 1'"
+
+tools:
+  - name: query
+    description: Execute a SQL query
+  - name: list_tables
+    description: List all tables in the database
+  - name: describe_table
+    description: Get the schema of a specific table
+
+relevant_sectors:
+  - development
+  - data
+  - operations

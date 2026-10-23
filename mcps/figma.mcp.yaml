@@ -1,0 +1,35 @@
+id: figma
+name: Figma
+description: Design files, components, and style inspection
+category: design
+icon: figma
+
+detection:
+  method: npm
+  npm:
+    package: "figma-developer-mcp"
+
+server:
+  command: npx
+  args: ["-y", "figma-developer-mcp"]
+  env:
+    FIGMA_ACCESS_TOKEN: "${FIGMA_ACCESS_TOKEN}"
+
+auth:
+  - key: FIGMA_ACCESS_TOKEN
+    label: "Figma Access Token"
+    hint: "Create at https://www.figma.com/developers/api#access-tokens"
+    required: true
+
+tools:
+  - name: get_file
+    description: Get a Figma file and its contents
+  - name: get_components
+    description: Get components from a Figma file
+  - name: get_styles
+    description: Get styles defined in a Figma file
+
+relevant_sectors:
+  - design
+  - product
+  - development

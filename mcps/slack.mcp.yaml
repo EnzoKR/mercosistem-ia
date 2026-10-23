@@ -1,0 +1,37 @@
+id: slack
+name: Slack
+description: Team messaging, channels, and notifications
+category: communication
+icon: slack
+
+detection:
+  method: npm
+  npm:
+    package: "@modelcontextprotocol/server-slack"
+
+server:
+  command: npx
+  args: ["-y", "@modelcontextprotocol/server-slack"]
+  env:
+    SLACK_BOT_TOKEN: "${SLACK_BOT_TOKEN}"
+
+auth:
+  - key: SLACK_BOT_TOKEN
+    label: "Slack Bot Token"
+    hint: "Create a Slack app at https://api.slack.com/apps"
+    required: true
+
+tools:
+  - name: send_message
+    description: Send a message to a channel
+  - name: list_channels
+    description: List available channels
+  - name: search_messages
+    description: Search messages across channels
+  - name: get_thread
+    description: Get messages in a thread
+
+relevant_sectors:
+  - communication
+  - operations
+  - customer-success

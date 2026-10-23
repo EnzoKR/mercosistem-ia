@@ -1,0 +1,32 @@
+id: pencil
+name: Pencil
+description: Visual design creation and editing in VS Code
+category: design
+icon: pencil
+
+detection:
+  method: extension
+  extension:
+    prefix: "highagency.pencildev-"
+    binary_dir: out
+    binary_resolve: platform
+
+server:
+  command: null
+  args: ["--app", "visual_studio_code"]
+  env: {}
+
+auth: []
+
+tools:
+  - name: batch_design
+    description: Create and modify visual designs
+  - name: batch_get
+    description: Read design nodes
+  - name: get_screenshot
+    description: Capture design screenshots
+
+relevant_sectors:
+  - design
+  - marketing
+  - product
